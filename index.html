@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>assignement - animacija</title>
+    <style>
+        html, body{
+        position: relative; width: 100%; height: 100%;
+        overflow: hidden; background-color: black;}
+        @keyframes my-animation1{
+            0%{transform: rotate(0deg); }
+            12.5%{transform: rotate(-45deg);}
+            25%{transform: rotate(-90deg); }
+            37.5%{transform: rotate(-135deg);}
+            50%{transform: rotate(-180deg);}
+            62.5%{transform: rotate(-225deg);}
+            75%{transform: rotate(-270deg);}
+            87.5%{transform: rotate(-315deg); }
+            100%{transform: rotate(-360deg);}
+        }
+
+        @keyframes my-animation2{
+            0%{transform: scale(3.8); }
+            25%{transform: scale(3); }
+            50%{transform: scale(2);}
+            75%{transform: scale(1);}
+            100%{transform: scale(0.5);}
+        }
+        #main-container{width: 800px; margin: 0 auto;
+            background: radial-gradient(circle,#55fb9f 19%, black 30%);
+            filter:grayscale(70%);}
+       
+         
+        .box{ width: 600px; height:600px; margin: 0 auto;
+        
+         animation: my-animation1 1s ease 0s infinite reverse forwards running;} 
+       
+ 
+        .circle1 {
+        background: rgb(12, 12, 12); border-radius: 100%;
+        height: 200px; width: 200px; position: absolute;
+        top: 200px; left: 200px;
+        }
+
+        .circle1::before {
+        display: block; position: absolute;
+        left: 75px;  top: 75px;
+        content: ''; width: 50px; height: 50px;
+        border-radius: 50%;
+        background-color: rgb(43, 42, 42);
+        animation: my-animation2 1.5s ease 0s infinite reverse forwards running;
+        }
+        .circle2 {
+        background-color:#fb5dad ; border-radius: 10%;
+        height: 20px; width: 100px; position: absolute;
+        top: 125px; left: 165px;
+        filter:opacity(49%);
+        transform: rotate(-65deg);
+        filter:blur(8px);
+     
+        }
+
+        .circle3 {
+        background-color:#55fb9f ; border-radius: 10%;
+        height: 30px; width: 100px; position: absolute;
+        top: 200px; right: 100px;
+        filter:opacity(49%);
+        transform: rotate(-160deg);
+        filter:blur(8px);
+        }
+
+        .circle4 {
+        background-color:#b97aff ; border-radius: 10%;
+        height: 30px; width: 60px; position: absolute;
+        bottom: 145px; left: 180px;
+        filter:opacity(49%);
+        transform: rotate(-120deg);
+        filter:blur(8px);
+        }
+        .circle5 {
+        background-color:#55fb9f ; border-radius: 10%;
+        height: 30px; width: 100px; position: absolute;
+        bottom: 35px; right: 165px;
+        filter:opacity(49%);
+        transform: rotate(70deg);
+        filter:blur(8px);
+        }
+
+        .circle6 {
+        background-color:#fb5dad ; border-radius: 10%;
+        height: 20px; width: 70px; position: absolute;
+        top: 195px; left: 132.5px; transform: rotate(15deg);
+        filter:opacity(49%);
+        transform: rotate(-45deg);
+        filter:blur(8px);
+        
+        }
+
+        .circle7 {
+        background-color:#b97aff ; border-radius: 10%;
+        height: 30px; width: 100px; position: absolute;
+        bottom: 195px; left: 102.5px;
+        filter:opacity(49%);
+        transform: rotate(30deg);
+        filter:blur(8px);
+        }
+
+        .circle8 {
+        background-color:#fb5dad ; border-radius: 10%;
+        height: 20px; width: 100px; position: absolute;
+        bottom: 162.5px; left: -45px;
+        filter:opacity(49%);
+        transform: rotate(120deg);
+        filter:blur(8px);
+       
+        }
+
+        .circle9 {
+        background-color:#55fb9f ; border-radius: 40%;
+        height: 30px; width: 30px; position: absolute;
+        bottom: 95.5px; right: 210px;
+        filter:opacity(49%);
+        transform: rotate(90deg);
+        filter:blur(8px);
+        }
+
+   
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <div class="box" id="box-1">
+            <div class="circle1"> 
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+                <div class="circle5"></div>
+                <div class="circle6"></div>
+                <div class="circle7"></div>
+                <div class="circle8"></div>
+                <div class="circle9"></div>
+        </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
